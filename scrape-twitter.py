@@ -52,7 +52,7 @@ for x in s:
 
     # Using TwitterSearchScraper to scrape data and append tweets to list
     for i,tweet in enumerate(sntwitter.TwitterSearchScraper('#mannkibaat since:'+x+' until:'+increment_date(increment_date(x))).get_items()):
-        if i>2000:
+        if i>5:
             break
         tweets_list2[tweet.id] = tweet.content
     
