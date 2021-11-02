@@ -1,3 +1,4 @@
+apt install python3.8
 python3.8 -m pip install pandas
 python3.8 -m pip install  git+https://github.com/JustAnotherArchivist/snscrape.git
 rm -rf filename.txt
