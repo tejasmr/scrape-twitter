@@ -42,14 +42,15 @@ def increment_date(date):
 
 x = str(s[0])
 x = x[0:4] + "-" + x[4:6] + "-" + x[6:]
-print(x, increment_date(x))
+# print(x, increment_date(x))
 
 # Creating list to append tweet data to
 tweets_list2 = {}
 
 # Using TwitterSearchScraper to scrape data and append tweets to list
 for i,tweet in enumerate(sntwitter.TwitterSearchScraper('#mannkibaat since:'+x+' until:'+increment_date(x)).get_items()):
-    print(tweet.coordinates)
+    print(tweet.id, tweet.coordinates)
+    print(tweet.content)
     if i>10:
         break
     tweets_list2[tweet.id] = tweet.content
