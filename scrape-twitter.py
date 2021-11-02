@@ -62,4 +62,4 @@ for x in s:
 # print(tweets1)
 # Creating a dataframe from the tweets list above
 f = open("tweets.json","w+")
-json.dump(tweets1,f,ensure_ascii = True)
+json.dump(tweets1,f,indent=4)
